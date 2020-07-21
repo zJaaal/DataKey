@@ -13,7 +13,7 @@ S-W.Z.Y.X
 
 ## Installation
 
-Be sure to install the next NuGet Extensions (Changes will be apply if required):
+- Be sure to install the next NuGet Extensions (Changes will be apply if required):
 
 ```bash
 - System.Data.SqlClient
