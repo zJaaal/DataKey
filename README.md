@@ -3,12 +3,19 @@ This is my first project. I'm working on a security system that aims to little c
 It works with a Random Generated KeyPass and a SQL Server DataBase. When a Master or a Guard is sure about your information and confirm that you are part of the DataBase. 
 Them can generate your own KeyPass for entering the system.
 
+## Versioning Scheme
+S-W.Z.Y.X
+- S - A release name
+- W - Big changes that affect the entire structure or roadmap of the application.
+- Y - Big changes that add significantly more features to the application. Releases will usually be made upon a change to this number
+- Z - Small changes that add or remove features, and usually scale up to a change to Y
+- X - Minor changes that usually include patches or even minor spelling fixes
+
 ## Installation
 
 Be sure to install the next NuGet extensions:
 
 ```bash
--- NETStandard.Library
 -- System.Data.SqlClient
 ```
 

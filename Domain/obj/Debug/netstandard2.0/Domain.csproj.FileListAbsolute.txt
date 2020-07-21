@@ -12,3 +12,17 @@ C:\Users\astef_000\Desktop\Jalinson\Programming\Sandbox\LoginExample\Domain\bin\
 C:\Users\astef_000\Desktop\Jalinson\Programming\Sandbox\LoginExample\Domain\obj\Debug\netstandard2.0\Domain.csproj.CopyComplete
 C:\Users\astef_000\Desktop\Jalinson\Programming\Sandbox\LoginExample\Domain\obj\Debug\netstandard2.0\Domain.dll
 C:\Users\astef_000\Desktop\Jalinson\Programming\Sandbox\LoginExample\Domain\obj\Debug\netstandard2.0\Domain.pdb
+C:\Users\astef_000\Desktop\Jalinson\Programming\Work in Progress\Domain\bin\Debug\netstandard2.0\Domain.deps.json
+C:\Users\astef_000\Desktop\Jalinson\Programming\Work in Progress\Domain\bin\Debug\netstandard2.0\Domain.dll
+C:\Users\astef_000\Desktop\Jalinson\Programming\Work in Progress\Domain\bin\Debug\netstandard2.0\Domain.pdb
+C:\Users\astef_000\Desktop\Jalinson\Programming\Work in Progress\Domain\bin\Debug\netstandard2.0\Common.dll
+C:\Users\astef_000\Desktop\Jalinson\Programming\Work in Progress\Domain\bin\Debug\netstandard2.0\DataAccess.dll
+C:\Users\astef_000\Desktop\Jalinson\Programming\Work in Progress\Domain\bin\Debug\netstandard2.0\Common.pdb
+C:\Users\astef_000\Desktop\Jalinson\Programming\Work in Progress\Domain\bin\Debug\netstandard2.0\DataAccess.pdb
+C:\Users\astef_000\Desktop\Jalinson\Programming\Work in Progress\Domain\obj\Debug\netstandard2.0\Domain.csprojAssemblyReference.cache
+C:\Users\astef_000\Desktop\Jalinson\Programming\Work in Progress\Domain\obj\Debug\netstandard2.0\Domain.AssemblyInfoInputs.cache
+C:\Users\astef_000\Desktop\Jalinson\Programming\Work in Progress\Domain\obj\Debug\netstandard2.0\Domain.AssemblyInfo.cs
+C:\Users\astef_000\Desktop\Jalinson\Programming\Work in Progress\Domain\obj\Debug\netstandard2.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\astef_000\Desktop\Jalinson\Programming\Work in Progress\Domain\obj\Debug\netstandard2.0\Domain.csproj.CopyComplete
+C:\Users\astef_000\Desktop\Jalinson\Programming\Work in Progress\Domain\obj\Debug\netstandard2.0\Domain.dll
+C:\Users\astef_000\Desktop\Jalinson\Programming\Work in Progress\Domain\obj\Debug\netstandard2.0\Domain.pdb

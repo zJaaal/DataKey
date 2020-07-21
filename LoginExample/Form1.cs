@@ -37,7 +37,6 @@ namespace LoginExample
             if(textBoxNick.Text == "ID")
             {
                 textBoxNick.Text = "";
-                textBoxNick.ForeColor = Color.LightGray;
             }
         }
 
@@ -46,7 +45,6 @@ namespace LoginExample
             if(textBoxNick.Text == "")
             {
                 textBoxNick.Text = "ID";
-                textBoxNick.ForeColor = Color.DimGray;
             }
         }
 
@@ -55,7 +53,6 @@ namespace LoginExample
             if (textBoxPass.Text == "KeyPass")
             {
                 textBoxPass.Text = "";
-                textBoxPass.ForeColor = Color.LightGray;
                 textBoxPass.UseSystemPasswordChar = true;
             }
         }
@@ -65,7 +62,6 @@ namespace LoginExample
             if (textBoxPass.Text == "")
             {
                 textBoxPass.Text = "KeyPass";
-                textBoxPass.ForeColor = Color.DimGray;
                 textBoxPass.UseSystemPasswordChar = false;
             }
         }
@@ -135,6 +131,52 @@ namespace LoginExample
             this.Show();
             textBoxNick.Focus();
 
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxNick_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void rectangleShape2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxPass_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbErrorMessage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void rectangleShape2_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }
