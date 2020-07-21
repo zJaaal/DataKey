@@ -1,7 +1,7 @@
 # DataKey
-This is my first project. I'm working on a security system that aims to little companies that can't afford Systems like fingerprint, face recognition, etc.
-It works with a Random Generated KeyPass and a SQL Server DataBase. When a Master or a Guard is sure about your information and confirm that you are part of the DataBase. 
-Them can generate your own KeyPass for entering the system.
+I'm working on a security system that aims to little companies that can't afford Systems like fingerprint, face recognition, etc.
+It works with a Random Generated KeyPass and a SQL Server DataBase. When a Master or a Guard is sure about the information provided for the employee and confirm that the employee is part of the DataBase. 
+They can generate an employee KeyPass for entering the system.
 
 ## Versioning Scheme
 S-W.Z.Y.X
@@ -19,7 +19,7 @@ S-W.Z.Y.X
 - System.Data.SqlClient
 ```
 - Be sure to change the SQL Server Data Base direction on DataAccess/ConnectionToSql.cs to your own SQL Server direction. (You can do this by changing the "server" and "DataBase" strings.)
-- Be sure to maintain the same template of tables. It is provided on Table.txt
+- Finally maintain the same template of tables. It is provided on Table.txt
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
