@@ -16,10 +16,10 @@ S-W.Z.Y.X
 Be sure to install the next NuGet Extensions (Changes will be apply if required):
 
 ```bash
--- System.Data.SqlClient
+- System.Data.SqlClient
 ```
-Be sure to change the SQL Server Data Base direction on DataAccess/ConnectionToSql.cs to your own SQL Server direction, you can do this by changing the "server" and "DataBase" strings.
-Be sure to maintain the same template of tables. It is provided on Table.txt
+- Be sure to change the SQL Server Data Base direction on DataAccess/ConnectionToSql.cs to your own SQL Server direction. (You can do this by changing the "server" and "DataBase" strings.)
+- Be sure to maintain the same template of tables. It is provided on Table.txt
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
