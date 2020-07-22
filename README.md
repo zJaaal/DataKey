@@ -19,6 +19,7 @@ S-W.Z.Y.X
 - System.Data.SqlClient
 ```
 - Be sure to change the SQL Server Data Base direction on DataAccess/ConnectionToSql.cs to your own SQL Server direction. (You can do this by changing the "server" and "DataBase" strings.)
+- Be sure to change the part of code in DataAccess/UserDao, to your own table name.
 - Finally maintain the same template of tables. It is provided on Table.txt
 
 ## Contributing

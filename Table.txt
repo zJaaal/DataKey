@@ -1,3 +1,5 @@
+Please follow the README.md steps for installation.
+
 Be sure to change the "server" and "DataBase" strings on DataAccess/ConnectionToSql.cs 
 
 Please use this template on the creation of your own table on Microsoft SQL Server. Don't change anything unless you are sure of what do you have to do to make it work.
