@@ -14,6 +14,7 @@ namespace Common.Cache
         public static string userLastName { get; set; }
         public static int userBornYear { get; set; }
         public static string userAccessLevel { get; set; }
+        public static string userKeyPass { get; set; }
 
 
     }

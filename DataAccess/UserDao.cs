@@ -28,6 +28,7 @@ namespace DataAccess
 
                     if (reader.HasRows)
                     {
+                        
                         while (reader.Read())
                         {
                             UserLoginCache.userID = reader.GetInt32(0);
@@ -36,8 +37,9 @@ namespace DataAccess
                             UserLoginCache.userLastName = reader.GetString(3);
                             UserLoginCache.userBornYear = reader.GetInt32(4);
                             UserLoginCache.userAccessLevel = reader.GetString(5);
-                            
+                            goto GoBackToIf;
                         }
+                        GoBackToIf:;
                         return true;
                     }
                     else

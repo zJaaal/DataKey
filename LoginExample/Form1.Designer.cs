@@ -1,4 +1,4 @@
-﻿namespace LoginExample
+﻿namespace Presentation
 {
     partial class Form1
     {
@@ -129,7 +129,7 @@
             this.rectangleShape2.FillGradientColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(60)))), ((int)(((byte)(113)))));
             this.rectangleShape2.FillGradientStyle = Microsoft.VisualBasic.PowerPacks.FillGradientStyle.Horizontal;
             this.rectangleShape2.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid;
-            this.rectangleShape2.Location = new System.Drawing.Point(-3, -17);
+            this.rectangleShape2.Location = new System.Drawing.Point(-4, -22);
             this.rectangleShape2.Name = "rectangleShape2";
             this.rectangleShape2.Size = new System.Drawing.Size(306, 477);
             this.rectangleShape2.Click += new System.EventHandler(this.rectangleShape2_Click);

@@ -11,8 +11,9 @@ using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
 using Domain;
 using Common.Cache;
+using Presentation;
 
-namespace LoginExample
+namespace Presentation
 {
     public partial class Form1 : Form
     {
@@ -98,9 +99,21 @@ namespace LoginExample
                     var validlogin = user.Loginuser(textBoxNick.Text, textBoxPass.Text);
                     if (validlogin == true)
                     {
-                        //* Here you can call the respective child form as master, Employee or Security Checker. Just now I'll just show a MessageBox*//
-                        MessageBox.Show("Login Succesfully");
-                        //*Overload the event nameoftheform.FormClose = LogOut()*//
+                       if (UserLoginCache.userAccessLevel == "Employee")
+                       {
+                            EmployeeForm EF = new EmployeeForm();
+                            EF.Show();
+                            EF.FormClosed += LogOut;
+                            this.Hide();
+                       }
+                       else if(UserLoginCache.userAccessLevel == "Master")
+                       {
+                             //Master's form (CRUD)
+                       }
+                       else if(UserLoginCache.userAccessLevel == "Guard")
+                        {
+                            // Search only and key generator form
+                        } 
                     }
                     else
                     {
