@@ -11,11 +11,13 @@ namespace Domain
         Random _ran = new Random();
         public string GenID()
         {
-            TryAgain:
+        TryAgain:
+
             NewID = _ran.Next(0, 999999).ToString();
             IDComparator _IDC = new IDComparator();
             _IDC.IDSearch(NewID);
             var Verification = _IDC.IDSearch(NewID);
+
             if (Verification == true)
             {
                 goto TryAgain;
