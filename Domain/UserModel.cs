@@ -14,7 +14,15 @@ namespace Domain
         {
             return userDao.Login(user, pass);
         }
+
+        Register register = new Register();
+        public bool RegisterInfo(string Identity)
+        {
+            return register.RegisterData(Identity);
+        }
     }
+}
+
         
             
 }

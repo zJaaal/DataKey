@@ -20,3 +20,4 @@ C:\Users\astef_000\Desktop\Jalinson\Programming\Work in Progress\LoginExample\bi
 C:\Users\astef_000\Desktop\Jalinson\Programming\Work in Progress\LoginExample\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
 C:\Users\astef_000\Desktop\Jalinson\Programming\Work in Progress\LoginExample\obj\Debug\Presentation.Form1.resources
 C:\Users\astef_000\Desktop\Jalinson\Programming\Work in Progress\LoginExample\obj\Debug\Presentation.EmployeeForm.resources
+C:\Users\astef_000\Desktop\Jalinson\Programming\Work in Progress\LoginExample\obj\Debug\Presentation.MasterForm.resources

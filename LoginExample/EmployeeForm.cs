@@ -31,7 +31,6 @@ namespace Presentation
         {
             FullnameLbl.Text = "Welcome! " + UserLoginCache.userLastName + ", " + UserLoginCache.userName;
             PositionLbl.Text = "Position: " + UserLoginCache.userPosition;
-            BornYearLbl.Text = "Year born: " + UserLoginCache.userBornYear;
             AccessLevelLbl.Text = "Access Level: " + UserLoginCache.userAccessLevel;
             DateLbl.Text = "Date: " + DateTime.Today.ToString("dd/MM/yyyy");
 

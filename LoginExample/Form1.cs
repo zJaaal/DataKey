@@ -99,19 +99,27 @@ namespace Presentation
                     var validlogin = user.Loginuser(textBoxNick.Text, textBoxPass.Text);
                     if (validlogin == true)
                     {
-                       if (UserLoginCache.userAccessLevel == "Employee")
-                       {
+                        if (UserLoginCache.userAccessLevel == "Employee")
+                        {
                             EmployeeForm EF = new EmployeeForm();
                             EF.Show();
                             EF.FormClosed += LogOut;
                             this.Hide();
-                       }
-                       else if(UserLoginCache.userAccessLevel == "Master")
-                       {
-                             //Master's form (CRUD)
-                       }
-                       else if(UserLoginCache.userAccessLevel == "Guard")
+                        }
+                        else if (UserLoginCache.userAccessLevel == "Master")
                         {
+                            MasterForm MF = new MasterForm();
+                            MF.Show();
+                            MF.FormClosed += LogOut;
+                            this.Hide();
+                            //Master's form (CRUD)
+                        }
+                        else if (UserLoginCache.userAccessLevel == "Guard")
+                        {
+                            GuardForm GF = new GuardForm();
+                            GF.Show();
+                            GF.FormClosed += LogOut;
+                            this.Hide();
                             // Search only and key generator form
                         } 
                     }

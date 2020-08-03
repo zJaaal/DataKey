@@ -35,11 +35,9 @@ namespace DataAccess
                             UserLoginCache.userPosition = reader.GetString(1);
                             UserLoginCache.userName = reader.GetString(2);
                             UserLoginCache.userLastName = reader.GetString(3);
-                            UserLoginCache.userBornYear = reader.GetInt32(4);
-                            UserLoginCache.userAccessLevel = reader.GetString(5);
-                            goto GoBackToIf;
+                            UserLoginCache.userAccessLevel = reader.GetString(4);
+                            UserLoginCache.userKeyPass = reader.GetString(5);
                         }
-                        GoBackToIf:;
                         return true;
                     }
                     else

@@ -20,7 +20,7 @@ S-W.Z.Y.X
 - Visual Basic PowerPacks
 ```
 - Be sure to change the SQL Server Data Base direction on DataAccess/ConnectionToSql.cs to your own SQL Server direction. (You can do this by changing the "server" and "DataBase" strings.)
-- Be sure to change the part of code in DataAccess/UserDao, to your own table name.
+- Be sure to change the part of code in DataAccess, to your own table name in every class that it's required.
 - Finally maintain the same template of tables. It is provided on Table.txt
 
 ## Contributing
