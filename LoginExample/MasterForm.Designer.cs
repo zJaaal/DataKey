@@ -34,20 +34,20 @@
             this.IDlbl = new System.Windows.Forms.Label();
             this.IDTbox = new System.Windows.Forms.TextBox();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.lineShape5 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape4 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.NameTBox = new System.Windows.Forms.TextBox();
             this.Namelbl = new System.Windows.Forms.Label();
-            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.Last_NameTBox = new System.Windows.Forms.TextBox();
             this.Last_NameLbl = new System.Windows.Forms.Label();
-            this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.Access_LevelLbl = new System.Windows.Forms.Label();
             this.KeyPassTBox = new System.Windows.Forms.TextBox();
             this.KeyPassLbl = new System.Windows.Forms.Label();
             this.PositionTBox = new System.Windows.Forms.TextBox();
             this.PositionLbl = new System.Windows.Forms.Label();
-            this.lineShape4 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape5 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.Access_LevelCBox = new System.Windows.Forms.ComboBox();
             this.SearchBtn = new System.Windows.Forms.Button();
             this.UpdateBtn = new System.Windows.Forms.Button();
@@ -118,6 +118,46 @@
             this.shapeContainer1.TabIndex = 12;
             this.shapeContainer1.TabStop = false;
             // 
+            // lineShape5
+            // 
+            this.lineShape5.BorderColor = System.Drawing.Color.White;
+            this.lineShape5.Name = "lineShape5";
+            this.lineShape5.X1 = 206;
+            this.lineShape5.X2 = 357;
+            this.lineShape5.Y1 = 160;
+            this.lineShape5.Y2 = 160;
+            this.lineShape5.Click += new System.EventHandler(this.lineShape2_Click);
+            // 
+            // lineShape4
+            // 
+            this.lineShape4.BorderColor = System.Drawing.Color.White;
+            this.lineShape4.Name = "lineShape4";
+            this.lineShape4.X1 = 206;
+            this.lineShape4.X2 = 357;
+            this.lineShape4.Y1 = 98;
+            this.lineShape4.Y2 = 98;
+            this.lineShape4.Click += new System.EventHandler(this.lineShape2_Click);
+            // 
+            // lineShape3
+            // 
+            this.lineShape3.BorderColor = System.Drawing.Color.White;
+            this.lineShape3.Name = "lineShape3";
+            this.lineShape3.X1 = 18;
+            this.lineShape3.X2 = 169;
+            this.lineShape3.Y1 = 219;
+            this.lineShape3.Y2 = 219;
+            this.lineShape3.Click += new System.EventHandler(this.lineShape2_Click);
+            // 
+            // lineShape1
+            // 
+            this.lineShape1.BorderColor = System.Drawing.Color.White;
+            this.lineShape1.Name = "lineShape1";
+            this.lineShape1.X1 = 18;
+            this.lineShape1.X2 = 169;
+            this.lineShape1.Y1 = 160;
+            this.lineShape1.Y2 = 160;
+            this.lineShape1.Click += new System.EventHandler(this.lineShape2_Click);
+            // 
             // lineShape2
             // 
             this.lineShape2.BorderColor = System.Drawing.Color.White;
@@ -152,16 +192,6 @@
             this.Namelbl.TabIndex = 13;
             this.Namelbl.Text = "Name";
             // 
-            // lineShape1
-            // 
-            this.lineShape1.BorderColor = System.Drawing.Color.White;
-            this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = 18;
-            this.lineShape1.X2 = 169;
-            this.lineShape1.Y1 = 160;
-            this.lineShape1.Y2 = 160;
-            this.lineShape1.Click += new System.EventHandler(this.lineShape2_Click);
-            // 
             // Last_NameTBox
             // 
             this.Last_NameTBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(60)))), ((int)(((byte)(113)))));
@@ -184,16 +214,6 @@
             this.Last_NameLbl.Size = new System.Drawing.Size(93, 21);
             this.Last_NameLbl.TabIndex = 15;
             this.Last_NameLbl.Text = "Last Name";
-            // 
-            // lineShape3
-            // 
-            this.lineShape3.BorderColor = System.Drawing.Color.White;
-            this.lineShape3.Name = "lineShape3";
-            this.lineShape3.X1 = 18;
-            this.lineShape3.X2 = 169;
-            this.lineShape3.Y1 = 219;
-            this.lineShape3.Y2 = 219;
-            this.lineShape3.Click += new System.EventHandler(this.lineShape2_Click);
             // 
             // Access_LevelLbl
             // 
@@ -252,26 +272,6 @@
             this.PositionLbl.Size = new System.Drawing.Size(68, 21);
             this.PositionLbl.TabIndex = 17;
             this.PositionLbl.Text = "Position";
-            // 
-            // lineShape4
-            // 
-            this.lineShape4.BorderColor = System.Drawing.Color.White;
-            this.lineShape4.Name = "lineShape4";
-            this.lineShape4.X1 = 206;
-            this.lineShape4.X2 = 357;
-            this.lineShape4.Y1 = 98;
-            this.lineShape4.Y2 = 98;
-            this.lineShape4.Click += new System.EventHandler(this.lineShape2_Click);
-            // 
-            // lineShape5
-            // 
-            this.lineShape5.BorderColor = System.Drawing.Color.White;
-            this.lineShape5.Name = "lineShape5";
-            this.lineShape5.X1 = 206;
-            this.lineShape5.X2 = 357;
-            this.lineShape5.Y1 = 160;
-            this.lineShape5.Y2 = 160;
-            this.lineShape5.Click += new System.EventHandler(this.lineShape2_Click);
             // 
             // Access_LevelCBox
             // 
@@ -403,6 +403,7 @@
             this.Controls.Add(this.shapeContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MasterForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MasterForm";
             this.Load += new System.EventHandler(this.MasterForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.CloseBtn)).EndInit();
