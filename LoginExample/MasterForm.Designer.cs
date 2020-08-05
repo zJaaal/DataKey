@@ -98,6 +98,7 @@
             this.IDTbox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IDTbox.ForeColor = System.Drawing.Color.White;
             this.IDTbox.Location = new System.Drawing.Point(18, 75);
+            this.IDTbox.MaxLength = 6;
             this.IDTbox.Name = "IDTbox";
             this.IDTbox.Size = new System.Drawing.Size(151, 20);
             this.IDTbox.TabIndex = 11;
@@ -234,6 +235,7 @@
             this.KeyPassTBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.KeyPassTBox.ForeColor = System.Drawing.Color.White;
             this.KeyPassTBox.Location = new System.Drawing.Point(206, 137);
+            this.KeyPassTBox.MaxLength = 6;
             this.KeyPassTBox.Name = "KeyPassTBox";
             this.KeyPassTBox.Size = new System.Drawing.Size(151, 20);
             this.KeyPassTBox.TabIndex = 20;
@@ -339,6 +341,7 @@
             this.KeyPassGenBtn.Text = "Generate KeyPass";
             this.KeyPassGenBtn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.KeyPassGenBtn.UseVisualStyleBackColor = true;
+            this.KeyPassGenBtn.Click += new System.EventHandler(this.KeyPassGenBtn_Click);
             // 
             // IDGenBtn
             // 
@@ -374,6 +377,7 @@
             this.Erasebtn.Text = "ERASE";
             this.Erasebtn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Erasebtn.UseVisualStyleBackColor = true;
+            this.Erasebtn.Click += new System.EventHandler(this.Erasebtn_Click);
             // 
             // MasterForm
             // 

@@ -10,10 +10,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Common.Cache;
 using Domain;
+using Microsoft.VisualBasic.ApplicationServices;
+
 namespace Presentation
 {
     public partial class MasterForm : Form
     {
+        UserModel userModel = new UserModel();
         public MasterForm()
         {
             InitializeComponent();
@@ -45,7 +48,6 @@ namespace Presentation
 
         private void SearchBtn_Click(object sender, EventArgs e)
         {
-            UserModel userModel = new UserModel();
             try
             {
                 userModel.RegisterInfo(IDTbox.Text);
@@ -69,7 +71,7 @@ namespace Presentation
                 var message = Ex.ToString();
                 MessageBox.Show(message);
             }
-            
+
         }
 
         private void CloseBtn_Click(object sender, EventArgs e)
@@ -101,13 +103,66 @@ namespace Presentation
             }
             catch (Exception Ex)
             {
-                MessageBox.Show(Ex.ToString());
+                var Message = Ex.ToString();
+                MessageBox.Show(Message);
             }
         }
 
         private void UpdateBtn_Click(object sender, EventArgs e)
         {
-           
+            try
+            {
+                var MsgBoxDes = userModel.Update(IDTbox.Text, PositionTBox.Text, NameTBox.Text, Last_NameTBox.Text, Access_LevelCBox.Text, KeyPassTBox.Text);
+
+                if (MsgBoxDes == true)
+                {
+                    MessageBox.Show("The ID information has been updated");
+                }
+                else
+                {
+                    MessageBox.Show("The ID Information has been added");
+                }
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show("An error has occurred: " + Ex);
+            }
+        }
+
+        private void Erasebtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var WarningMesg = userModel.EraseAdvice(IDTbox.Text);
+                if (WarningMesg == true)
+                {
+                    DialogResult Result = MessageBox.Show("Are you sure to erase this ID information from the Data Base?","Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if(Result == DialogResult.Yes)
+                    {
+                        userModel.Erase(IDTbox.Text);
+                        MessageBox.Show("The ID information has been erased from the Data Base");
+                        NameTBox.Clear();
+                        Last_NameTBox.Clear();
+                        PositionTBox.Clear();
+                        KeyPassTBox.Clear();
+                    }
+                }
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show("An error has occurred: " + Ex);
+            }
+        }
+
+        private void KeyPassGenBtn_Click(object sender, EventArgs e)
+        {
+            DialogResult Answer = MessageBox.Show("Are you sure to generete a New KeyPass? (Remember to update it in the Data Base)", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (Answer == DialogResult.Yes)
+            {
+                KeyPassGenerator _KPG = new KeyPassGenerator();
+                var KeyPass = _KPG.GenKeyPass();
+                KeyPassTBox.Text = KeyPass;
+            }
         }
     }
 }

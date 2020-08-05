@@ -9,13 +9,13 @@ namespace Domain
     {
         public string NewID { get; set; }
         Random _ran = new Random();
+        IDComparator _IDC = new IDComparator();
         public string GenID()
         {
         TryAgain:
 
             NewID = _ran.Next(0, 999999).ToString();
-            IDComparator _IDC = new IDComparator();
-            _IDC.IDSearch(NewID);
+
             var Verification = _IDC.IDSearch(NewID);
 
             if (Verification == true)

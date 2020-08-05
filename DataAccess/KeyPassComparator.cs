@@ -3,13 +3,11 @@ using System.Collections.Generic;
 using System.Text;
 using System.Data.SqlClient;
 using System.Data;
-using Common.Cache;
-
 namespace DataAccess
 {
-    public class IDComparator : ConnectionToSQL
+    public class KeyPassComparator : ConnectionToSQL
     {
-        public bool IDSearch(string user)
+        public bool KPSearch(string KP)
         {
             using (var connection = GetConnection())
             {
@@ -18,8 +16,8 @@ namespace DataAccess
                 {
                     command.Connection = connection;
                     /*Remember to change the name of YOUR table in the code below*/
-                    command.CommandText = "select *from EmployeesInfo where ID =@user";
-                    command.Parameters.AddWithValue("@user", user);
+                    command.CommandText = "select *from EmployeesInfo where KeyPass =@KeyPass";
+                    command.Parameters.AddWithValue("@KeyPass", KP);
                     command.CommandType = CommandType.Text;
                     SqlDataReader reader = command.ExecuteReader();
 
@@ -30,8 +28,8 @@ namespace DataAccess
                     }
                     else
                         connection.Close();
-                        return false;
-                    
+                    return false;
+
                 }
             }
         }

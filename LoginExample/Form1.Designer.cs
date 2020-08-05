@@ -63,6 +63,7 @@
             this.textBoxNick.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNick.ForeColor = System.Drawing.Color.White;
             this.textBoxNick.Location = new System.Drawing.Point(25, 106);
+            this.textBoxNick.MaxLength = 6;
             this.textBoxNick.Name = "textBoxNick";
             this.textBoxNick.Size = new System.Drawing.Size(278, 20);
             this.textBoxNick.TabIndex = 1;
@@ -78,6 +79,7 @@
             this.textBoxPass.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPass.ForeColor = System.Drawing.Color.White;
             this.textBoxPass.Location = new System.Drawing.Point(25, 145);
+            this.textBoxPass.MaxLength = 6;
             this.textBoxPass.Name = "textBoxPass";
             this.textBoxPass.Size = new System.Drawing.Size(278, 20);
             this.textBoxPass.TabIndex = 2;

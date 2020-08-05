@@ -34,7 +34,6 @@ namespace DataAccess
                         RegisterCache.userAccessLevel = reader.GetString(4);
                         RegisterCache.userKeyPass = reader.GetString(5);
                         }
-                      
                         return true;
                     }
                     else
