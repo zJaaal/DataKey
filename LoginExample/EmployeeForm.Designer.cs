@@ -58,9 +58,11 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(275, 320);
             this.panel1.TabIndex = 0;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // MinBtn
             // 
+            this.MinBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.MinBtn.Image = ((System.Drawing.Image)(resources.GetObject("MinBtn.Image")));
             this.MinBtn.Location = new System.Drawing.Point(12, 268);
             this.MinBtn.Name = "MinBtn";
@@ -116,6 +118,7 @@
             // 
             // LogoutBtn
             // 
+            this.LogoutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LogoutBtn.Image = ((System.Drawing.Image)(resources.GetObject("LogoutBtn.Image")));
             this.LogoutBtn.Location = new System.Drawing.Point(207, 258);
             this.LogoutBtn.Name = "LogoutBtn";
@@ -135,6 +138,7 @@
             this.rectangleShape1.Location = new System.Drawing.Point(274, -17);
             this.rectangleShape1.Name = "rectangleShape1";
             this.rectangleShape1.Size = new System.Drawing.Size(496, 362);
+            this.rectangleShape1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.rectangleShape1_MouseDown);
             // 
             // shapeContainer2
             // 

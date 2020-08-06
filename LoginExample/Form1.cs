@@ -154,46 +154,6 @@ namespace Presentation
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxNick_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void rectangleShape2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxPass_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbErrorMessage_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void rectangleShape2_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();

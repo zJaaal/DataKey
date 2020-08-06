@@ -60,6 +60,7 @@
             // 
             // CloseBtn
             // 
+            this.CloseBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CloseBtn.Image = ((System.Drawing.Image)(resources.GetObject("CloseBtn.Image")));
             this.CloseBtn.Location = new System.Drawing.Point(348, 3);
             this.CloseBtn.Name = "CloseBtn";
@@ -71,6 +72,7 @@
             // 
             // MinBtn
             // 
+            this.MinBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.MinBtn.Image = ((System.Drawing.Image)(resources.GetObject("MinBtn.Image")));
             this.MinBtn.Location = new System.Drawing.Point(327, 3);
             this.MinBtn.Name = "MinBtn";
@@ -127,7 +129,6 @@
             this.lineShape5.X2 = 357;
             this.lineShape5.Y1 = 160;
             this.lineShape5.Y2 = 160;
-            this.lineShape5.Click += new System.EventHandler(this.lineShape2_Click);
             // 
             // lineShape4
             // 
@@ -137,7 +138,6 @@
             this.lineShape4.X2 = 357;
             this.lineShape4.Y1 = 98;
             this.lineShape4.Y2 = 98;
-            this.lineShape4.Click += new System.EventHandler(this.lineShape2_Click);
             // 
             // lineShape3
             // 
@@ -147,7 +147,6 @@
             this.lineShape3.X2 = 169;
             this.lineShape3.Y1 = 219;
             this.lineShape3.Y2 = 219;
-            this.lineShape3.Click += new System.EventHandler(this.lineShape2_Click);
             // 
             // lineShape1
             // 
@@ -157,7 +156,6 @@
             this.lineShape1.X2 = 169;
             this.lineShape1.Y1 = 160;
             this.lineShape1.Y2 = 160;
-            this.lineShape1.Click += new System.EventHandler(this.lineShape2_Click);
             // 
             // lineShape2
             // 
@@ -167,7 +165,6 @@
             this.lineShape2.X2 = 169;
             this.lineShape2.Y1 = 98;
             this.lineShape2.Y2 = 98;
-            this.lineShape2.Click += new System.EventHandler(this.lineShape2_Click);
             // 
             // NameTBox
             // 
@@ -226,7 +223,6 @@
             this.Access_LevelLbl.Size = new System.Drawing.Size(109, 21);
             this.Access_LevelLbl.TabIndex = 21;
             this.Access_LevelLbl.Text = "Access Level";
-            this.Access_LevelLbl.Click += new System.EventHandler(this.Access_LevelLbl_Click);
             // 
             // KeyPassTBox
             // 
@@ -410,6 +406,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MasterForm";
             this.Load += new System.EventHandler(this.MasterForm_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MasterForm_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.CloseBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MinBtn)).EndInit();
             this.ResumeLayout(false);

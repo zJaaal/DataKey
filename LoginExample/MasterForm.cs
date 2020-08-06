@@ -1,5 +1,4 @@
 ﻿using System;
-using System.CodeDom;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,9 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Common.Cache;
+using System.Runtime.InteropServices;
+using System.Runtime.CompilerServices;
 using Domain;
-using Microsoft.VisualBasic.ApplicationServices;
+using Common.Cache;
+using Presentation;
 
 namespace Presentation
 {
@@ -22,17 +23,15 @@ namespace Presentation
             InitializeComponent();
         }
 
-        private void lineShape2_Click(object sender, EventArgs e)
-        {
+        /* Those lines are for moving the window using the mouse */
 
-        }
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
         private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Access_LevelLbl_Click(object sender, EventArgs e)
         {
 
         }
@@ -50,20 +49,27 @@ namespace Presentation
         {
             try
             {
-                userModel.RegisterInfo(IDTbox.Text);
-                var ValidID = userModel.RegisterInfo(IDTbox.Text);
-                if (ValidID == true)
+                if (IDTbox.Text == "")
                 {
-                    NameTBox.Text = RegisterCache.userName;
-                    Last_NameTBox.Text = RegisterCache.userLastName;
-                    IDTbox.Text = RegisterCache.userID.ToString();
-                    PositionTBox.Text = RegisterCache.userPosition;
-                    KeyPassTBox.Text = RegisterCache.userKeyPass;
-                    Access_LevelCBox.Text = RegisterCache.userAccessLevel;
+                    MessageBox.Show("Please enter an ID to search", "Advice", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
                 {
-                    MessageBox.Show("The ID is not in the Data Base", "Error");
+                    userModel.RegisterInfo(IDTbox.Text);
+                    var ValidID = userModel.RegisterInfo(IDTbox.Text);
+                    if (ValidID == true)
+                    {
+                        NameTBox.Text = RegisterCache.userName;
+                        Last_NameTBox.Text = RegisterCache.userLastName;
+                        IDTbox.Text = RegisterCache.userID.ToString();
+                        PositionTBox.Text = RegisterCache.userPosition;
+                        KeyPassTBox.Text = RegisterCache.userKeyPass;
+                        Access_LevelCBox.Text = RegisterCache.userAccessLevel;
+                    }
+                    else
+                    {
+                        MessageBox.Show("The ID is not in the Data Base", "Error");
+                    }
                 }
             }
             catch (Exception Ex)
@@ -112,15 +118,32 @@ namespace Presentation
         {
             try
             {
-                var MsgBoxDes = userModel.Update(IDTbox.Text, PositionTBox.Text, NameTBox.Text, Last_NameTBox.Text, Access_LevelCBox.Text, KeyPassTBox.Text);
-
-                if (MsgBoxDes == true)
+                if(IDTbox.Text == "" || 
+                   NameTBox.Text == "" || 
+                   Last_NameTBox.Text == "" || 
+                   PositionTBox.Text == "" || 
+                   KeyPassTBox.Text == "" || 
+                   Access_LevelCBox.Text == "")
                 {
-                    MessageBox.Show("The ID information has been updated");
+                    MessageBox.Show("Some spaces are empty", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
-                    MessageBox.Show("The ID Information has been added");
+                    DialogResult Answer = MessageBox.Show("Are you sure to change the Data Base?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                    if (Answer == DialogResult.Yes)
+                    {
+                        var MsgBoxDes = userModel.Update(IDTbox.Text, PositionTBox.Text, NameTBox.Text, Last_NameTBox.Text, Access_LevelCBox.Text, KeyPassTBox.Text);
+
+                        if (MsgBoxDes == true)
+                        {
+                            MessageBox.Show("The ID information has been updated");
+                        }
+                        else
+                        {
+                            MessageBox.Show("The ID Information has been added");
+                        }
+                    }
                 }
             }
             catch (Exception Ex)
@@ -163,6 +186,12 @@ namespace Presentation
                 var KeyPass = _KPG.GenKeyPass();
                 KeyPassTBox.Text = KeyPass;
             }
+        }
+
+        private void MasterForm_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

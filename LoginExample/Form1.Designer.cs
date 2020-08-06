@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.panel2 = new System.Windows.Forms.Panel();
             this.textBoxNick = new System.Windows.Forms.TextBox();
             this.textBoxPass = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -40,21 +39,12 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.ForeColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(25, 125);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(278, 1);
-            this.panel2.TabIndex = 1;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // textBoxNick
             // 
@@ -68,7 +58,6 @@
             this.textBoxNick.Size = new System.Drawing.Size(278, 20);
             this.textBoxNick.TabIndex = 1;
             this.textBoxNick.Text = "ID";
-            this.textBoxNick.TextChanged += new System.EventHandler(this.textBoxNick_TextChanged);
             this.textBoxNick.Enter += new System.EventHandler(this.textBoxNick_Enter);
             this.textBoxNick.Leave += new System.EventHandler(this.textBoxNick_Leave);
             // 
@@ -84,7 +73,6 @@
             this.textBoxPass.Size = new System.Drawing.Size(278, 20);
             this.textBoxPass.TabIndex = 2;
             this.textBoxPass.Text = "KeyPass";
-            this.textBoxPass.TextChanged += new System.EventHandler(this.textBoxPass_TextChanged);
             this.textBoxPass.Enter += new System.EventHandler(this.textBoxPass_Enter);
             this.textBoxPass.Leave += new System.EventHandler(this.textBoxPass_Leave);
             // 
@@ -109,7 +97,6 @@
             this.lbErrorMessage.TabIndex = 8;
             this.lbErrorMessage.Text = "Error Message";
             this.lbErrorMessage.Visible = false;
-            this.lbErrorMessage.Click += new System.EventHandler(this.lbErrorMessage_Click);
             // 
             // shapeContainer1
             // 
@@ -134,7 +121,6 @@
             this.rectangleShape2.Location = new System.Drawing.Point(-4, -22);
             this.rectangleShape2.Name = "rectangleShape2";
             this.rectangleShape2.Size = new System.Drawing.Size(306, 477);
-            this.rectangleShape2.Click += new System.EventHandler(this.rectangleShape2_Click);
             this.rectangleShape2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.rectangleShape2_MouseDown);
             // 
             // BtnConnect
@@ -156,6 +142,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(299, 9);
             this.pictureBox2.Name = "pictureBox2";
@@ -167,6 +154,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(320, 9);
             this.pictureBox1.Name = "pictureBox1";
@@ -195,6 +183,15 @@
             this.panel1.TabIndex = 9;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.ForeColor = System.Drawing.Color.White;
+            this.panel2.Location = new System.Drawing.Point(25, 125);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(278, 1);
+            this.panel2.TabIndex = 1;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -206,7 +203,6 @@
             this.label2.Size = new System.Drawing.Size(107, 36);
             this.label2.TabIndex = 4;
             this.label2.Text = "LOGIN";
-            this.label2.Click += new System.EventHandler(this.label1_Click);
             // 
             // Form1
             // 
@@ -233,7 +229,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox textBoxNick;
         private System.Windows.Forms.TextBox textBoxPass;
         private System.Windows.Forms.Panel panel3;
@@ -245,6 +240,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel2;
     }
 }
 
