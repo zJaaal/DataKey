@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Common.Cache;
 using System.Data;
 using System.Data.SqlClient;
-using System.Text;
-using Common;
-using Common.Cache;
 
 namespace DataAccess
 {
-   public class Register : ConnectionToSQL
-   {
+    public class Register : ConnectionToSQL
+    {
         public bool RegisterData(string Identity)
         {
             using (var connection = GetConnection())
@@ -27,12 +23,12 @@ namespace DataAccess
                     {
                         while (reader.Read())
                         {
-                        RegisterCache.userID = reader.GetInt32(0);
-                        RegisterCache.userPosition = reader.GetString(1);
-                        RegisterCache.userName = reader.GetString(2);
-                        RegisterCache.userLastName = reader.GetString(3);
-                        RegisterCache.userAccessLevel = reader.GetString(4);
-                        RegisterCache.userKeyPass = reader.GetString(5);
+                            RegisterCache.userID = reader.GetInt32(0);
+                            RegisterCache.userPosition = reader.GetString(1);
+                            RegisterCache.userName = reader.GetString(2);
+                            RegisterCache.userLastName = reader.GetString(3);
+                            RegisterCache.userAccessLevel = reader.GetString(4);
+                            RegisterCache.userKeyPass = reader.GetString(5);
                         }
                         return true;
                     }
@@ -43,5 +39,5 @@ namespace DataAccess
                 }
             }
         }
-   }
+    }
 }

@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MasterForm));
-            this.CloseBtn = new System.Windows.Forms.PictureBox();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.MinBtn = new System.Windows.Forms.PictureBox();
             this.IDlbl = new System.Windows.Forms.Label();
             this.IDTbox = new System.Windows.Forms.TextBox();
@@ -54,27 +56,19 @@
             this.KeyPassGenBtn = new System.Windows.Forms.Button();
             this.IDGenBtn = new System.Windows.Forms.Button();
             this.Erasebtn = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.CloseBtn)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.EmployeesTable = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.MinBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmployeesTable)).BeginInit();
             this.SuspendLayout();
-            // 
-            // CloseBtn
-            // 
-            this.CloseBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CloseBtn.Image = ((System.Drawing.Image)(resources.GetObject("CloseBtn.Image")));
-            this.CloseBtn.Location = new System.Drawing.Point(348, 3);
-            this.CloseBtn.Name = "CloseBtn";
-            this.CloseBtn.Size = new System.Drawing.Size(15, 15);
-            this.CloseBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.CloseBtn.TabIndex = 8;
-            this.CloseBtn.TabStop = false;
-            this.CloseBtn.Click += new System.EventHandler(this.CloseBtn_Click);
             // 
             // MinBtn
             // 
             this.MinBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.MinBtn.Image = ((System.Drawing.Image)(resources.GetObject("MinBtn.Image")));
-            this.MinBtn.Location = new System.Drawing.Point(327, 3);
+            this.MinBtn.Location = new System.Drawing.Point(348, 12);
             this.MinBtn.Name = "MinBtn";
             this.MinBtn.Size = new System.Drawing.Size(15, 15);
             this.MinBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -117,7 +111,7 @@
             this.lineShape3,
             this.lineShape1,
             this.lineShape2});
-            this.shapeContainer1.Size = new System.Drawing.Size(375, 377);
+            this.shapeContainer1.Size = new System.Drawing.Size(789, 377);
             this.shapeContainer1.TabIndex = 12;
             this.shapeContainer1.TabStop = false;
             // 
@@ -274,6 +268,7 @@
             // Access_LevelCBox
             // 
             this.Access_LevelCBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(60)))), ((int)(((byte)(113)))));
+            this.Access_LevelCBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Access_LevelCBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Access_LevelCBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Access_LevelCBox.ForeColor = System.Drawing.Color.White;
@@ -289,6 +284,7 @@
             // 
             // SearchBtn
             // 
+            this.SearchBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SearchBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.SearchBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(60)))), ((int)(((byte)(113)))));
             this.SearchBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(114)))), ((int)(((byte)(152)))));
@@ -306,6 +302,7 @@
             // 
             // UpdateBtn
             // 
+            this.UpdateBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.UpdateBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.UpdateBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(60)))), ((int)(((byte)(113)))));
             this.UpdateBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(114)))), ((int)(((byte)(152)))));
@@ -324,6 +321,7 @@
             // KeyPassGenBtn
             // 
             this.KeyPassGenBtn.AccessibleName = "IDGenBtn";
+            this.KeyPassGenBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.KeyPassGenBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.KeyPassGenBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(60)))), ((int)(((byte)(113)))));
             this.KeyPassGenBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(114)))), ((int)(((byte)(152)))));
@@ -342,6 +340,7 @@
             // IDGenBtn
             // 
             this.IDGenBtn.AccessibleName = "IDGenBtn";
+            this.IDGenBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.IDGenBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.IDGenBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(60)))), ((int)(((byte)(113)))));
             this.IDGenBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(114)))), ((int)(((byte)(152)))));
@@ -360,6 +359,7 @@
             // Erasebtn
             // 
             this.Erasebtn.AccessibleName = "IDGenBtn";
+            this.Erasebtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Erasebtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.Erasebtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(60)))), ((int)(((byte)(113)))));
             this.Erasebtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(114)))), ((int)(((byte)(152)))));
@@ -375,12 +375,85 @@
             this.Erasebtn.UseVisualStyleBackColor = true;
             this.Erasebtn.Click += new System.EventHandler(this.Erasebtn_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 325);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(52, 52);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 28;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // EmployeesTable
+            // 
+            this.EmployeesTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.EmployeesTable.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.EmployeesTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(60)))), ((int)(((byte)(113)))));
+            this.EmployeesTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.EmployeesTable.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.EmployeesTable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(114)))), ((int)(((byte)(152)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.EmployeesTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.EmployeesTable.ColumnHeadersHeight = 30;
+            this.EmployeesTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.EmployeesTable.Cursor = System.Windows.Forms.Cursors.Hand;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(60)))), ((int)(((byte)(113)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(114)))), ((int)(((byte)(152)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.EmployeesTable.DefaultCellStyle = dataGridViewCellStyle5;
+            this.EmployeesTable.EnableHeadersVisualStyles = false;
+            this.EmployeesTable.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(114)))), ((int)(((byte)(152)))));
+            this.EmployeesTable.Location = new System.Drawing.Point(384, 12);
+            this.EmployeesTable.Name = "EmployeesTable";
+            this.EmployeesTable.ReadOnly = true;
+            this.EmployeesTable.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(60)))), ((int)(((byte)(113)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(114)))), ((int)(((byte)(152)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.EmployeesTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.EmployeesTable.RowHeadersVisible = false;
+            this.EmployeesTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.EmployeesTable.Size = new System.Drawing.Size(393, 353);
+            this.EmployeesTable.TabIndex = 29;
+            this.EmployeesTable.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.EmployeesTable_CellMouseClick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(15, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(82, 22);
+            this.label1.TabIndex = 48;
+            this.label1.Text = "Register";
+            // 
             // MasterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(60)))), ((int)(((byte)(113)))));
-            this.ClientSize = new System.Drawing.Size(375, 377);
+            this.ClientSize = new System.Drawing.Size(789, 377);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.EmployeesTable);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Erasebtn);
             this.Controls.Add(this.KeyPassGenBtn);
             this.Controls.Add(this.IDGenBtn);
@@ -398,7 +471,6 @@
             this.Controls.Add(this.Namelbl);
             this.Controls.Add(this.IDTbox);
             this.Controls.Add(this.IDlbl);
-            this.Controls.Add(this.CloseBtn);
             this.Controls.Add(this.MinBtn);
             this.Controls.Add(this.shapeContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -407,16 +479,15 @@
             this.Text = "MasterForm";
             this.Load += new System.EventHandler(this.MasterForm_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MasterForm_MouseDown);
-            ((System.ComponentModel.ISupportInitialize)(this.CloseBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MinBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmployeesTable)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox CloseBtn;
         private System.Windows.Forms.PictureBox MinBtn;
         private System.Windows.Forms.Label IDlbl;
         private System.Windows.Forms.TextBox IDTbox;
@@ -441,5 +512,8 @@
         private System.Windows.Forms.Button KeyPassGenBtn;
         private System.Windows.Forms.Button IDGenBtn;
         private System.Windows.Forms.Button Erasebtn;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridView EmployeesTable;
+        private System.Windows.Forms.Label label1;
     }
 }

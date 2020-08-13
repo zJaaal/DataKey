@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
-using System.Security.Cryptography.X509Certificates;
 
 namespace DataAccess
 {
@@ -17,7 +13,7 @@ namespace DataAccess
                 using (var Command = new SqlCommand())
                 { //Be sure to change it to your DataBase Names
                     Command.Connection = connection;
-                    Command.CommandText = "insert into EmployeesInfo values("+Identity+",'"+Position+"','"+Name+"','"+Last_Name+"','"+Access_Level+"','"+KeyPass+"')";
+                    Command.CommandText = "insert into EmployeesInfo values(" + Identity + ",'" + Position + "','" + Name + "','" + Last_Name + "','" + Access_Level + "','" + KeyPass + "')";
                     Command.ExecuteNonQuery();
                     connection.Close();
                 }
@@ -31,7 +27,7 @@ namespace DataAccess
                 using (var Command = new SqlCommand())
                 { //Be sure to change it to your DataBase Names
                     Command.Connection = connection;
-                    Command.CommandText = "update EmployeesInfo set Position='" + Position + "', Name='" + Name + "', Last_Name='" + Last_Name + "', Access_Level='" + Access_Level + "', KeyPass='" + KeyPass + "'where id='"+Identity+"'";
+                    Command.CommandText = "update EmployeesInfo set Position='" + Position + "', Name='" + Name + "', Last_Name='" + Last_Name + "', Access_Level='" + Access_Level + "', KeyPass='" + KeyPass + "'where id='" + Identity + "'";
                     Command.ExecuteNonQuery();
                     connection.Close();
                 }
@@ -48,6 +44,30 @@ namespace DataAccess
                     Command.CommandText = "delete  from EmployeesInfo where id='" + Identity + "'";
                     Command.ExecuteNonQuery();
                     connection.Close();
+                }
+            }
+        }
+        public DataTable ShowQuery()
+        {
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var Command = new SqlCommand())
+                { //Be sure to change it to your DataBase Names
+                    Command.Connection = connection;
+                    Command.CommandText = "Select *from EmployeesInfo";
+                    Command.ExecuteNonQuery();
+
+                    DataTable _EmployeesTable = new DataTable();
+
+                    SqlDataReader Read;
+                    Read = Command.ExecuteReader();
+
+                    _EmployeesTable.Load(Read);
+
+                    connection.Close();
+
+                    return _EmployeesTable;
                 }
             }
         }

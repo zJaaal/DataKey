@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Common.Cache
+﻿namespace Common.Cache
 {
     //* You'll use this cache data for register form, when you search using the ID you can modify every TextBox and selection for Access Level, then there will be an update button that will send the new information to the Data Base*//
     //* Don't forget about the delete button*//

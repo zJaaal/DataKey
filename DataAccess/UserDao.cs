@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Common.Cache;
 using System.Data;
 using System.Data.SqlClient;
-using Common.Cache;
 
 namespace DataAccess
 {
@@ -13,7 +8,7 @@ namespace DataAccess
     {
         public bool Login(string user, string pass)
         {
-            using(var connection = GetConnection())
+            using (var connection = GetConnection())
             {
                 connection.Open();
                 using (var command = new SqlCommand())
@@ -28,7 +23,7 @@ namespace DataAccess
 
                     if (reader.HasRows)
                     {
-                        
+
                         while (reader.Read())
                         {
                             UserLoginCache.userID = reader.GetInt32(0);

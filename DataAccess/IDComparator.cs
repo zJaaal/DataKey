@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Data;
 using System.Data.SqlClient;
-using System.Data;
-using Common.Cache;
 
 namespace DataAccess
 {
@@ -30,8 +26,8 @@ namespace DataAccess
                     }
                     else
                         connection.Close();
-                        return false;
-                    
+                    return false;
+
                 }
             }
         }

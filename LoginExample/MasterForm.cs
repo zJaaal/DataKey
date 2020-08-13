@@ -1,17 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
+﻿using Common.Cache;
 using Domain;
-using Common.Cache;
-using Presentation;
+using Microsoft.VisualBasic.ApplicationServices;
+using System;
+using System.Runtime.InteropServices;
+using System.Windows.Forms;
 
 namespace Presentation
 {
@@ -43,6 +35,7 @@ namespace Presentation
             Last_NameTBox.Clear();
             PositionTBox.Clear();
             KeyPassTBox.Clear();
+            ChargeTable();
         }
 
         private void SearchBtn_Click(object sender, EventArgs e)
@@ -118,11 +111,11 @@ namespace Presentation
         {
             try
             {
-                if(IDTbox.Text == "" || 
-                   NameTBox.Text == "" || 
-                   Last_NameTBox.Text == "" || 
-                   PositionTBox.Text == "" || 
-                   KeyPassTBox.Text == "" || 
+                if (IDTbox.Text == "" ||
+                   NameTBox.Text == "" ||
+                   Last_NameTBox.Text == "" ||
+                   PositionTBox.Text == "" ||
+                   KeyPassTBox.Text == "" ||
                    Access_LevelCBox.Text == "")
                 {
                     MessageBox.Show("Some spaces are empty", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -138,10 +131,12 @@ namespace Presentation
                         if (MsgBoxDes == true)
                         {
                             MessageBox.Show("The ID information has been updated");
+                            ChargeTable();
                         }
                         else
                         {
                             MessageBox.Show("The ID Information has been added");
+                            ChargeTable();
                         }
                     }
                 }
@@ -159,8 +154,8 @@ namespace Presentation
                 var WarningMesg = userModel.EraseAdvice(IDTbox.Text);
                 if (WarningMesg == true)
                 {
-                    DialogResult Result = MessageBox.Show("Are you sure to erase this ID information from the Data Base?","Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                    if(Result == DialogResult.Yes)
+                    DialogResult Result = MessageBox.Show("Are you sure to erase this ID information from the Data Base?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (Result == DialogResult.Yes)
                     {
                         userModel.Erase(IDTbox.Text);
                         MessageBox.Show("The ID information has been erased from the Data Base");
@@ -168,6 +163,7 @@ namespace Presentation
                         Last_NameTBox.Clear();
                         PositionTBox.Clear();
                         KeyPassTBox.Clear();
+                        ChargeTable();
                     }
                 }
             }
@@ -192,6 +188,29 @@ namespace Presentation
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            EmployeeForm EF = new EmployeeForm();
+            this.Hide();
+            EF.Show();
+        }
+
+        private void ChargeTable()
+        {
+            UserModel _UserModel = new UserModel();
+            EmployeesTable.DataSource = _UserModel.ShowEmployees();
+        }
+
+        private void EmployeesTable_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            IDTbox.Text = EmployeesTable.CurrentRow.Cells["ID"].Value.ToString();
+            PositionTBox.Text = EmployeesTable.CurrentRow.Cells["Position"].Value.ToString();
+            NameTBox.Text = EmployeesTable.CurrentRow.Cells["Name"].Value.ToString();
+            Last_NameTBox.Text = EmployeesTable.CurrentRow.Cells["Last_Name"].Value.ToString();
+            Access_LevelCBox.Text = EmployeesTable.CurrentRow.Cells["Access_Level"].Value.ToString();
+            KeyPassTBox.Text = EmployeesTable.CurrentRow.Cells["KeyPass"].Value.ToString();
         }
     }
 }

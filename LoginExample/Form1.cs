@@ -1,17 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
+﻿using Common.Cache;
 using Domain;
-using Common.Cache;
-using Presentation;
+using System;
+using System.Runtime.InteropServices;
+using System.Windows.Forms;
 
 namespace Presentation
 {
@@ -35,7 +26,7 @@ namespace Presentation
 
         private void textBoxNick_Enter(object sender, EventArgs e)
         {
-            if(textBoxNick.Text == "ID")
+            if (textBoxNick.Text == "ID")
             {
                 textBoxNick.Text = "";
             }
@@ -43,7 +34,7 @@ namespace Presentation
 
         private void textBoxNick_Leave(object sender, EventArgs e)
         {
-            if(textBoxNick.Text == "")
+            if (textBoxNick.Text == "")
             {
                 textBoxNick.Text = "ID";
             }
@@ -91,7 +82,7 @@ namespace Presentation
 
         private void BtnConnect_Click(object sender, EventArgs e)
         {
-            if (textBoxNick.Text != "ID") 
+            if (textBoxNick.Text != "ID")
             {
                 if (textBoxPass.Text != "KeyPass")
                 {
@@ -103,14 +94,12 @@ namespace Presentation
                         {
                             EmployeeForm EF = new EmployeeForm();
                             EF.Show();
-                            EF.FormClosed += LogOut;
                             this.Hide();
                         }
                         else if (UserLoginCache.userAccessLevel == "Master")
                         {
                             MasterForm MF = new MasterForm();
                             MF.Show();
-                            MF.FormClosed += LogOut;
                             this.Hide();
                             //Master's form (CRUD)
                         }
@@ -118,10 +107,9 @@ namespace Presentation
                         {
                             GuardForm GF = new GuardForm();
                             GF.Show();
-                            GF.FormClosed += LogOut;
                             this.Hide();
                             // Search only and key generator form
-                        } 
+                        }
                     }
                     else
                     {
@@ -142,18 +130,6 @@ namespace Presentation
             lbErrorMessage.Text = msg;
             lbErrorMessage.Visible = true;
         }
-        //* This method will be use on the others form for logout and show the login form*//
-        private void LogOut (object sender, FormClosedEventArgs e)
-        {
-            textBoxNick.Text = "ID";
-            textBoxPass.Text = "KeyPass";
-            textBoxPass.UseSystemPasswordChar = false;
-            lbErrorMessage.Visible = false;
-            this.Show();
-            textBoxNick.Focus();
-
-        }
-
         private void rectangleShape2_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();

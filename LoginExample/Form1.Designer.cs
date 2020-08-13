@@ -114,6 +114,7 @@
             this.rectangleShape2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(60)))), ((int)(((byte)(113)))));
             this.rectangleShape2.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
             this.rectangleShape2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(60)))), ((int)(((byte)(113)))));
+            this.rectangleShape2.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.rectangleShape2.FillColor = System.Drawing.Color.Cyan;
             this.rectangleShape2.FillGradientColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(60)))), ((int)(((byte)(113)))));
             this.rectangleShape2.FillGradientStyle = Microsoft.VisualBasic.PowerPacks.FillGradientStyle.Horizontal;
@@ -126,6 +127,7 @@
             // BtnConnect
             // 
             this.BtnConnect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(60)))), ((int)(((byte)(113)))));
+            this.BtnConnect.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnConnect.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.BtnConnect.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(60)))), ((int)(((byte)(113)))));
             this.BtnConnect.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(114)))), ((int)(((byte)(152)))));
@@ -167,6 +169,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(60)))), ((int)(((byte)(113)))));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panel1.Controls.Add(this.lbErrorMessage);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.panel2);
@@ -176,6 +179,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.textBoxNick);
             this.panel1.Controls.Add(this.BtnConnect);
+            this.panel1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(303, 0);
             this.panel1.Name = "panel1";

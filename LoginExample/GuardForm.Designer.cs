@@ -42,7 +42,6 @@
             this.Namelbl = new System.Windows.Forms.Label();
             this.IDTbox = new System.Windows.Forms.TextBox();
             this.IDlbl = new System.Windows.Forms.Label();
-            this.CloseBtn = new System.Windows.Forms.PictureBox();
             this.MinBtn = new System.Windows.Forms.PictureBox();
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
@@ -53,8 +52,10 @@
             this.lineShape6 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.Access_LevelTBox = new System.Windows.Forms.TextBox();
             this.UpdateBtn = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.CloseBtn)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.MinBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // KeyPassGenBtn
@@ -108,6 +109,7 @@
             // 
             this.KeyPassTBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(60)))), ((int)(((byte)(113)))));
             this.KeyPassTBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.KeyPassTBox.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.KeyPassTBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.KeyPassTBox.ForeColor = System.Drawing.Color.White;
             this.KeyPassTBox.Location = new System.Drawing.Point(205, 147);
@@ -133,6 +135,7 @@
             // 
             this.PositionTBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(60)))), ((int)(((byte)(113)))));
             this.PositionTBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PositionTBox.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.PositionTBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PositionTBox.ForeColor = System.Drawing.Color.White;
             this.PositionTBox.Location = new System.Drawing.Point(205, 85);
@@ -157,6 +160,7 @@
             // 
             this.Last_NameTBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(60)))), ((int)(((byte)(113)))));
             this.Last_NameTBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Last_NameTBox.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Last_NameTBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Last_NameTBox.ForeColor = System.Drawing.Color.White;
             this.Last_NameTBox.Location = new System.Drawing.Point(17, 206);
@@ -181,6 +185,7 @@
             // 
             this.NameTBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(60)))), ((int)(((byte)(113)))));
             this.NameTBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NameTBox.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.NameTBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NameTBox.ForeColor = System.Drawing.Color.White;
             this.NameTBox.Location = new System.Drawing.Point(17, 147);
@@ -226,21 +231,10 @@
             this.IDlbl.TabIndex = 29;
             this.IDlbl.Text = "ID";
             // 
-            // CloseBtn
-            // 
-            this.CloseBtn.Image = ((System.Drawing.Image)(resources.GetObject("CloseBtn.Image")));
-            this.CloseBtn.Location = new System.Drawing.Point(347, 13);
-            this.CloseBtn.Name = "CloseBtn";
-            this.CloseBtn.Size = new System.Drawing.Size(15, 15);
-            this.CloseBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.CloseBtn.TabIndex = 27;
-            this.CloseBtn.TabStop = false;
-            this.CloseBtn.Click += new System.EventHandler(this.CloseBtn_Click);
-            // 
             // MinBtn
             // 
             this.MinBtn.Image = ((System.Drawing.Image)(resources.GetObject("MinBtn.Image")));
-            this.MinBtn.Location = new System.Drawing.Point(326, 13);
+            this.MinBtn.Location = new System.Drawing.Point(348, 12);
             this.MinBtn.Name = "MinBtn";
             this.MinBtn.Size = new System.Drawing.Size(15, 15);
             this.MinBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -322,6 +316,7 @@
             // 
             this.Access_LevelTBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(60)))), ((int)(((byte)(113)))));
             this.Access_LevelTBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Access_LevelTBox.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Access_LevelTBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Access_LevelTBox.ForeColor = System.Drawing.Color.White;
             this.Access_LevelTBox.Location = new System.Drawing.Point(205, 206);
@@ -350,12 +345,36 @@
             this.UpdateBtn.Visible = false;
             this.UpdateBtn.Click += new System.EventHandler(this.UpdateBtn_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 306);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(52, 52);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 46;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(14, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(146, 22);
+            this.label1.TabIndex = 47;
+            this.label1.Text = "Key Generator";
+            // 
             // GuardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(60)))), ((int)(((byte)(113)))));
             this.ClientSize = new System.Drawing.Size(375, 358);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.UpdateBtn);
             this.Controls.Add(this.Access_LevelTBox);
             this.Controls.Add(this.KeyPassGenBtn);
@@ -371,7 +390,6 @@
             this.Controls.Add(this.Namelbl);
             this.Controls.Add(this.IDTbox);
             this.Controls.Add(this.IDlbl);
-            this.Controls.Add(this.CloseBtn);
             this.Controls.Add(this.MinBtn);
             this.Controls.Add(this.shapeContainer1);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -381,8 +399,8 @@
             this.Text = "GuardForm";
             this.Load += new System.EventHandler(this.GuardForm_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.GuardForm_MouseDown);
-            ((System.ComponentModel.ISupportInitialize)(this.CloseBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MinBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -403,7 +421,6 @@
         private System.Windows.Forms.Label Namelbl;
         private System.Windows.Forms.TextBox IDTbox;
         private System.Windows.Forms.Label IDlbl;
-        private System.Windows.Forms.PictureBox CloseBtn;
         private System.Windows.Forms.PictureBox MinBtn;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
@@ -414,5 +431,7 @@
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape6;
         private System.Windows.Forms.TextBox Access_LevelTBox;
         private System.Windows.Forms.Button UpdateBtn;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

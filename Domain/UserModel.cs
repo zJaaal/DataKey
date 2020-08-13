@@ -1,9 +1,6 @@
-﻿using System;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Text;
-using System.Collections.Generic;
-using DataAccess;
+﻿using DataAccess;
+using System;
+using System.Data;
 
 namespace Domain
 {
@@ -36,7 +33,7 @@ namespace Domain
                 Ins.ADDQuery(ID, Position, Name, Last_Name, Access_Level, KeyPass);
                 return false;
             }
-            
+
         }
         public bool UpdateGuard(string Identity, string Position, string Name, string Last_Name, string Access_Level, string KeyPass)
         {
@@ -69,6 +66,13 @@ namespace Domain
         public void Erase(string Identity)
         {
             Ins.EraseQuery(Convert.ToInt32(Identity));
+        }
+
+        public DataTable ShowEmployees()
+        {
+            DataTable _EmployeesInfo = new DataTable();
+            _EmployeesInfo = Ins.ShowQuery();
+            return _EmployeesInfo;
         }
     }
 }

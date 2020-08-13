@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using DataAccess;
+﻿using DataAccess;
+using System;
 
 namespace Domain
 {
     public class KeyPassGenerator
     {
-        public string NewKeyPass {get; set;}
-    
+        public string NewKeyPass { get; set; }
+
         KeyPassComparator _KPG = new KeyPassComparator();
         Random RND = new Random();
 
@@ -16,7 +14,7 @@ namespace Domain
         char Letter;
         public string GenKeyPass()
         {
-            TryAgain:;
+        TryAgain:;
             for (int i = 0; i < 6; i++)
             {
                 Letter = Characters[RND.Next(Characters.Length)];

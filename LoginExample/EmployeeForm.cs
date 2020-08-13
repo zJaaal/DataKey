@@ -1,17 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using Common.Cache;
+using System;
 using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
-using Domain;
-using Common.Cache;
-using Presentation;
+using System.Windows.Forms;
 
 namespace Presentation
 {
@@ -32,16 +22,28 @@ namespace Presentation
         {
             if (MessageBox.Show("Are you sure to Logout?", "Warning",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
                 this.Close();
+                Form1 LF = new Form1();
+                LF.Show();
+            }
         }
 
         private void EmployeeForm_Load(object sender, EventArgs e)
         {
+            SwapBtn.Visible = false;
             FullnameLbl.Text = "Welcome! " + UserLoginCache.userLastName + ", " + UserLoginCache.userName;
             PositionLbl.Text = "Position: " + UserLoginCache.userPosition;
             AccessLevelLbl.Text = "Access Level: " + UserLoginCache.userAccessLevel;
             DateLbl.Text = "Date: " + DateTime.Today.ToString("dd/MM/yyyy");
-
+            if (UserLoginCache.userAccessLevel == "Guard")
+            {
+                SwapBtn.Visible = true;
+            }
+            else if (UserLoginCache.userAccessLevel == "Master")
+            {
+                SwapBtn.Visible = true;
+            }
         }
 
         private void MinBtn_Click(object sender, EventArgs e)
@@ -59,6 +61,21 @@ namespace Presentation
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void SwapBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            if (UserLoginCache.userAccessLevel == "Guard")
+            {
+                GuardForm GF = new GuardForm();
+                GF.Show();
+            }
+            else if (UserLoginCache.userAccessLevel == "Master")
+            {
+                MasterForm MF = new MasterForm();
+                MF.Show();
+            }
         }
     }
 }

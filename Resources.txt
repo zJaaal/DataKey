@@ -1,2 +1,3 @@
 Thanks to the provider of the icons
 icons8.com (Logout button)
+<a target="_blank" href="https://icons8.com/icons/set/swap">Swap icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
