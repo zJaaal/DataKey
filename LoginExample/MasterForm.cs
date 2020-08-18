@@ -1,6 +1,5 @@
 ﻿using Common.Cache;
 using Domain;
-using Microsoft.VisualBasic.ApplicationServices;
 using System;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;

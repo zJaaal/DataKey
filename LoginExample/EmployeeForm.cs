@@ -24,7 +24,7 @@ namespace Presentation
                 MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 this.Close();
-                Form1 LF = new Form1();
+                LoginForm LF = new LoginForm();
                 LF.Show();
             }
         }

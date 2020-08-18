@@ -134,7 +134,7 @@ namespace Presentation
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Form1 LF = new Form1();
+            LoginForm LF = new LoginForm();
             EmployeeForm EF = new EmployeeForm();
             this.Hide();
             EF.Show();
